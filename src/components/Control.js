@@ -5,7 +5,7 @@ import React, { useContext, useMemo, useState } from 'react';
 import { findByName } from '../common/services';
 import { AppContext } from '../context/AppProvider';
 
-export default function Control(props) {
+export default function Control() {
     const [value, setValue] = useState('');
     const [form] = Form.useForm();
     const { pokemonList, setSearch } = useContext(AppContext);
@@ -58,7 +58,7 @@ export default function Control(props) {
         <Form form={form} layout="vertical">
             <Form.Item
                 name="name"
-                style={{ marginBottom: '5px', width: '60%', display: 'inline-block' }}
+                className="media-query-item"
             >
                 <DebounceSelect
                     showSearch
@@ -72,7 +72,7 @@ export default function Control(props) {
             <Button
                 type="primary"
                 icon={<SearchOutlined />}
-                style={{ width: 'calc(35% - 5px)', marginLeft: '5px' }}
+                className="media-query-button"
                 onClick={handleSubmit}
             >Search</Button>
         </Form>

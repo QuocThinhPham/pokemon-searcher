@@ -1,6 +1,7 @@
 import { Col, Row, Typography } from 'antd';
 import React, { useCallback, useContext, useEffect } from 'react';
 import { getAllPokemonName } from './apis/pokemon';
+import './App.css';
 import Control from './components/Control';
 import PokemonBox from './components/PokemonBox';
 import { AppContext } from './context/AppProvider';
